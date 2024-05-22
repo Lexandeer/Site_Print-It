@@ -26,14 +26,11 @@ function addDot() {										//Fonction pour ajouter mes dots.
 		let dot = document.createElement('div');
 		dot.className = 'dot';
 		dots.appendChild(dot);
-
-		if ( i === 0) {
-			dot.className += ' dot_selected';
-		}	
 	}
 }
 document.addEventListener('DOMContentLoaded', function() {  //J'appelle ma fonction pour ajouter les dots, au chargement de la page.
 	addDot();
+	slideUpDate(currentIndex);
 })
 
 
@@ -45,7 +42,7 @@ function slideUpDate(currentIndex){
 	img.setAttribute("src", slides[currentIndex].image);
 	p.innerHTML = slides[currentIndex].tagLine;
 
-	let dot = document.querySelectorAll("#banner div.dot");
+	let dot = document.querySelectorAll("#banner .dot");
 	for(let i = 0; i < slides.length; i++) {
 		if(i === currentIndex){
 			dot[i].classList.add('dot_selected');
