@@ -55,24 +55,20 @@ function slideUpDate(currentIndex){
 
 let arrowRight = document.querySelector("#banner button.arrow_right");		
 	arrowRight.addEventListener("click",() => {									//EventListener pour la flèche de droite.
-		console.log("Vous avez cliquez sur la flèche de droite !");
 		currentIndex += 1;
 			if (currentIndex === 4) {
 				currentIndex = 0;
 			}
-		console.log(currentIndex);
 		slideUpDate(currentIndex);
 	})
 
 
 let arrowLeft = document.querySelector("#banner button.arrow_left");
 	arrowLeft.addEventListener("click",() => {									//EventListener pour la flèche de gauche.
-		console.log("Vous avez cliquez sur la flèche de gauche !");
 		currentIndex -= 1;
 		if (currentIndex === -1) {
 			currentIndex = 3;
 		}
-		console.log(currentIndex);
 		slideUpDate(currentIndex);
 	})				
 
